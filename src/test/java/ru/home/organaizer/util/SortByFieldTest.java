@@ -48,7 +48,7 @@ public class SortByFieldTest {
     }
 
     @Test
-    public void compare() {
+    public void sortByField() {
         SortByField comparator = new SortByField();
 
         DataSourceDao json = new JsonFileDataSource(tmpFile);
