@@ -119,7 +119,7 @@ public class ClientsView implements View {
     }
 
     /*Чтение ID с консоли и проверка на существование*/
-    private String readAndCheckIdFromConsole(Scanner scanner) {
+    private String readAndCheckIdFromConsole(Scanner scanner) throws OrganizerException {
         try {
             System.out.println("Введите ID:");
             String id = scanner.next();
@@ -132,7 +132,7 @@ public class ClientsView implements View {
     }
 
     /*Чтение клиениа с консоли*/
-    private Client readClientFromConsole(Scanner scanner) {
+    private Client readClientFromConsole(Scanner scanner) throws OrganizerException {
         try {
             String id = UUID.randomUUID().toString();
             System.out.println("Введите ФИО:");
@@ -152,7 +152,7 @@ public class ClientsView implements View {
     }
 
     /*Чтение номера телефона или email с консоли и проверка в завиимости от regex*/
-    private String readPhoneNumberOrEmail(Scanner scanner, Pattern regex) {
+    private String readPhoneNumberOrEmail(Scanner scanner, Pattern regex) throws OrganizerException {
         try {
             StringBuilder read = new StringBuilder();
 
@@ -207,7 +207,7 @@ public class ClientsView implements View {
     }
 
     /**/
-    private SortByField.Order readOrderFromConsole(Scanner scanner) {
+    private SortByField.Order readOrderFromConsole(Scanner scanner) throws OrganizerException {
         try {
             SortByField.Order order = null;
             System.out.println("1 - сотировать по ID");

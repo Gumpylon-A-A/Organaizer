@@ -8,9 +8,15 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
-}
 
+}
+repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+        url 'http://nexus.sigma.sbrf.ru:8099/nexus/content/repositories/central/'
+    }
+}
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile group: "com.google.code.gson", name: "gson", version: "2.7"
