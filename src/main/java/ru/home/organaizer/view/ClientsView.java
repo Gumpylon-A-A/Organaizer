@@ -94,7 +94,7 @@ public class ClientsView implements View {
                             }
                             break;
                         case "findid":
-                            System.out.println("Введите id телефона для поиска: ");
+                            System.out.println("Введите id для поиска: ");
                             String findId = readAndCheckIdFromConsole(sc);
                             if (findId != null) {
                                 showClient(controller.onFindClient(findId));
